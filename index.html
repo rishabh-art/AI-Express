@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neubrutalism Blog</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hyperlink Styles */
+        a {
+            color: #66cc00; /* Set hyperlink color to neon green */
+            text-decoration: none; /* Underline hyperlinks */
+        }
+
+        a:hover {
+            color: #ff9933; /* Change hyperlink color on hover */
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+
+        body {
+            font-family: 'Courier New', monospace; /* Changed font to Courier New, reminiscent of old computers */
+            background-color: #333; /* Changed background color to a dark, retro-inspired tone */
+            color: #66cc00; /* Changed text color to a bright, neon green */
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000; /* Changed background color to a deep, dark tone */
+            color: #66cc00; /* Changed text color to match the body text color */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold; /* Added bold font weight to give a retro feel */
+        }
+
+        /* Blog Post Styles */
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .post {
+            background-color: #444; /* Changed background color to a dark, retro-inspired tone */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .post:hover {
+            transform: translateY(-10px);
+        }
+
+        .post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .post h2 {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold; /* Added bold font weight to give a retro feel */
+        }
+
+        .post p {
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        /* Trending and Recent Post Styles */
+        .trending,.recent {
+            margin-right: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .trending,.recent {
+                margin: 0 0 20px 0;
+            }
+        }
+
+        body {
+            cursor: none; /* Hide the default cursor */
+        }
+
+        .custom-cursor {
+            position: fixed;
+            pointer-events: none; /* Ensure the cursor doesn't interfere with clickable elements */
+            z-index: 9999; /* Ensure the cursor appears on top of other content */
+        }
+
+        .custom-cursor img {
+            width: 40px; /* Adjust the width and height of the cursor image */
+            height: 40px;
+}       
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Neubrutalism Blog</h1>
+    </header>
+    <div class="blog-posts">
+
+        <a href="post1.html"><div class="post trending"><img src="post1/cover.png" alt="Post 1"></a>
+            <h2>The Whisperwood Challenge: A Tale of Friendship and Hidden Magic</h2>
+            <p>Electric fence guards secrets. Kids find magic within; what does their destiny hold?</p>
+        </div>
+        <div class="post trending">
+            <img src="https://via.placeholder.com/300x200" alt="Post 2">
+            <h2>Post 2 Title</h2>
+            <p>This is the description for Post 2.</p>
+        </div>
+        <div class="post recent">
+            <img src="https://via.placeholder.com/300x200" alt="Post 3">
+            <h2>Post 3 Title</h2>
+            <p>This is the description for Post 3.</p>
+        </div>
+        <div class="post recent">
+            <img src="https://via.placeholder.com/300x200" alt="Post 4">
+            <h2>Post 4 Title</h2>
+            <p>This is the description for Post 4.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const cursor = document.createElement("div");
+        const cursorImg = document.createElement("img");
+        cursorImg.src = "cursor.png"; // Set the image source to your custom cursor image
+        cursor.classList.add("custom-cursor");
+        cursor.appendChild(cursorImg);
+        document.body.appendChild(cursor);
+
+        document.addEventListener("mousemove", function(e) {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+  });
+});
+
+    </script>
+</body>
+</html>
